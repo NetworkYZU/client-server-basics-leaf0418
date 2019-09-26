@@ -25,7 +25,7 @@ public class DictClient {
     public static void main(String[] args) throws Exception {
         // TODO code application logic here
         Socket socket = new Socket("dict.org", 2628);
-        socket.setSoTimeout(15000);
+        socket.setSoTimeout(15000);//超過15秒沒有反應則離開
         //hint: 從 socket 取得 OutputStream
         OutputStream out = null;
         out = socket.getOutputStream();
